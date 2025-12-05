@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, MouseEvent } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { clsx } from 'clsx';
@@ -8,7 +8,7 @@ import { clsx } from 'clsx';
 const navLinks = [
   { href: '#features', label: 'Funcionalidades' },
   { href: '#pricing', label: 'Preços' },
-  { href: '#contact', label: 'Contato' },
+  { href: '#cta', label: 'Contato' },
 ];
 
 export default function Header() {
@@ -23,6 +23,31 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleLinkClick = (e: MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const targetId = href.substring(1);
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      const headerOffset = 80; // Altura do header (h-20 = 5rem = 80px)
+      const elementPosition = targetElement.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth',
+      });
+    }
+  };
+
+  const handleLogoClick = (e: MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <header
       className={clsx(
@@ -35,7 +60,7 @@ export default function Header() {
     >
       <div className="container mx-auto flex h-20 items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo + Nome */}
-        <Link href="/" className="flex items-center gap-3">
+        <Link href="/" onClick={handleLogoClick} className="flex items-center gap-3">
           <Image
             src="/logo_1.png"
             alt="ShapeZap IA Logo"
@@ -47,26 +72,31 @@ export default function Header() {
 
         {/* Navegação */}
         <nav className="hidden items-center gap-10 md:flex">
-  {navLinks.map((link) => (
-    <Link key={link.href} href={link.href} className="relative group">
-      <span
-        className="
-          text-sm font-medium text-foreground/80 
-          transition-colors duration-300 group-hover:text-primary
-        "
-      >
-        {link.label}
-      </span>
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={(e) => handleLinkClick(e, link.href)}
+              className="relative group"
+            >
+              <span
+                className="
+                  text-sm font-medium text-foreground/80 
+                  transition-colors duration-300 group-hover:text-primary
+                "
+              >
+                {link.label}
+              </span>
 
-      <span
-        className="
-          absolute left-0 -bottom-1 h-[2px] w-0 bg-primary 
-          transition-all duration-300 group-hover:w-full
-        "
-      />
-    </Link>
-  ))}
-</nav>
+              <span
+                className="
+                  absolute left-0 -bottom-1 h-[2px] w-0 bg-primary 
+                  transition-all duration-300 group-hover:w-full
+                "
+              />
+            </Link>
+          ))}
+        </nav>
       </div>
     </header>
   );

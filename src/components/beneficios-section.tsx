@@ -1,4 +1,5 @@
 import { Check } from 'lucide-react';
+import { FadeIn } from './FadeIn';
 
 const beneficios = [
   {
@@ -47,33 +48,37 @@ export default function BeneficiosSection() {
 
       <div className="relative z-10 container mx-auto grid grid-cols-1 items-center gap-y-16 px-4 sm:px-6 lg:grid-cols-2 lg:gap-x-16 lg:px-8">
         {/* Coluna da Esquerda: Cabeçalho da seção */}
-        <div className="text-center lg:text-left">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary/80">
-            Benefícios
-          </p>
-          <h2 className="mt-3 font-montserrat text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-            Por que usar o ShapeZap?
-          </h2>
-          <p className="mt-4 text-lg text-foreground/70 md:text-xl">
-            Descubra como o ShapeZap foi pensado para se integrar perfeitamente
-            à sua vida, tornando o caminho para seus objetivos mais fácil e
-            intuitivo.
-          </p>
-        </div>
+        <FadeIn direction="right">
+          <div className="text-center lg:text-left">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary/80">
+              Benefícios
+            </p>
+            <h2 className="mt-3 font-montserrat text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
+              Por que usar o ShapeZap?
+            </h2>
+            <p className="mt-4 text-lg text-foreground/70 md:text-xl">
+              Descubra como o ShapeZap foi pensado para se integrar perfeitamente
+              à sua vida, tornando o caminho para seus objetivos mais fácil e
+              intuitivo.
+            </p>
+          </div>
+        </FadeIn>
 
         {/* Coluna da Direita: Cards com os benefícios */}
-        <div className="flex flex-col gap-8">
-          {beneficios.map((beneficio) => (
-            <div key={beneficio.description} className="flex items-start gap-6">
-              <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-primary/10">
-                {beneficio.icon}
+        <FadeIn direction="left" delay={200} className="flex flex-col gap-8">
+          {beneficios.map((beneficio, index) => (
+            <FadeIn key={beneficio.description} delay={index * 150}>
+              <div className="flex items-start gap-6">
+                <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-primary/10">
+                  {beneficio.icon}
+                </div>
+                <p className="text-lg text-foreground/80">
+                  {beneficio.description}
+                </p>
               </div>
-              <p className="text-lg text-foreground/80">
-                {beneficio.description}
-              </p>
-            </div>
+            </FadeIn>
           ))}
-        </div>
+        </FadeIn>
       </div>
     </section>
   );

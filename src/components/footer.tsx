@@ -1,27 +1,21 @@
-import { Facebook, Instagram, Twitter } from 'lucide-react';
+import { Instagram, MessageCircle } from 'lucide-react';
 import Link from 'next/link';
 
 const socialLinks = [
-  {
-    href: 'https://facebook.com',
-    icon: <Facebook className="h-6 w-6" />,
-    name: 'Facebook',
-  },
   {
     href: 'https://instagram.com',
     icon: <Instagram className="h-6 w-6" />,
     name: 'Instagram',
   },
   {
-    href: 'https://twitter.com',
-    icon: <Twitter className="h-6 w-6" />,
-    name: 'Twitter',
+    href: 'https://whatsapp.com',
+    icon: <MessageCircle className="h-6 w-6" />,
+    name: 'WhatsApp',
   },
 ];
 
 const footerLinks = [
-  { href: '/about', label: 'Sobre nós' },
-  { href: '/contact', label: 'Contato' },
+  { href: '/about', label: 'Sobre' },
   { href: '/terms', label: 'Termos de Serviço' },
   { href: '/privacy', label: 'Política de Privacidade' },
 ];
