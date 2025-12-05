@@ -28,11 +28,11 @@ export default function ComoFuncionaSection() {
       id="features"
       className="relative overflow-hidden bg-background py-16 sm:py-10 lg:py-18"
     >
-      {/* CÍRCULOS DE FUNDO */}
-      <div className="pointer-events-none absolute -right-40 top-20 h-[400px] w-[400px] rounded-full border-[3px] border-primary/20" />
-      <div className="pointer-events-none absolute -right-10 top-40 h-[600px] w-[600px] rounded-full border-[2px] border-primary/10" />
-      <div className="pointer-events-none absolute -left-52 bottom-0 h-[500px] w-[500px] rounded-full border-[3px] border-primary/10" />
-      <div className="pointer-events-none absolute right-100 -top-70 h-[500px] w-[500px] rounded-full border-[2px] border-primary/30" />
+      {/* Círculos decorativos de fundo */}
+      <div className="pointer-events-none absolute -right-40 top-20 hidden h-[400px] w-[400px] rounded-full border-[3px] border-primary/20 lg:block" />
+      <div className="pointer-events-none absolute -right-10 top-40 hidden h-[600px] w-[600px] rounded-full border-[2px] border-primary/10 lg:block" />
+      <div className="pointer-events-none absolute -left-52 bottom-0 hidden h-[500px] w-[500px] rounded-full border-[3px] border-primary/10 lg:block" />
+      <div className="pointer-events-none absolute right-100 -top-70 hidden h-[500px] w-[500px] rounded-full border-[2px] border-primary/30 lg:block" />
 
       <div className="relative z-10 container mx-auto grid grid-cols-1 items-center gap-y-16 px-4 sm:px-6 lg:grid-cols-2 lg:gap-x-16 lg:px-8">
         {/* Coluna da Esquerda: Cards com os passos */}

@@ -47,8 +47,8 @@ export default function ParaquemSection() {
       className="relative overflow-hidden bg-background py-16 sm:py-10 lg:py-18"
     >
       {/* Círculos decorativos de fundo */}
-      <div className="pointer-events-none absolute -right-20 top-1/4 h-[400px] w-[400px] rounded-full border-[2px] border-primary/10" />
-      <div className="pointer-events-none absolute -left-32 bottom-1/4 h-[500px] w-[500px] rounded-full border-[3px] border-primary/15" />
+      <div className="pointer-events-none absolute -right-20 top-1/4 hidden h-[400px] w-[400px] rounded-full border-[2px] border-primary/10 lg:block" />
+      <div className="pointer-events-none absolute -left-32 bottom-1/4 hidden h-[500px] w-[500px] rounded-full border-[3px] border-primary/15 lg:block" />
 
       <div className="relative z-10 container mx-auto grid grid-cols-1 items-center gap-y-16 px-4 sm:px-6 lg:grid-cols-2 lg:gap-x-16 lg:px-8">
         {/* Coluna da Esquerda: Cabeçalho da seção */}

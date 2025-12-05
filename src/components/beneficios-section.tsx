@@ -41,10 +41,10 @@ export default function BeneficiosSection() {
       className="relative overflow-hidden bg-background py-16 sm:py-10 lg:py-18"
     >
       {/* Círculos decorativos de fundo */}
-      <div className="pointer-events-none absolute -left-40 top-60 h-[500px] w-[500px] -translate-y-1/2 rounded-full border-[2px] border-primary/10" />
-      <div className="pointer-events-none absolute -right-40 bottom-0 h-[400px] w-[400px] rounded-full border-[3px] border-primary/20" />
-      <div className="pointer-events-none absolute -left-32 top-20 h-[300px] w-[300px] rounded-full border-[3px] border-primary/30" />
-      <div className="pointer-events-none absolute -left-10 top-10 h-[500px] w-[500px] rounded-full border-[3px] border-primary/20" />
+      <div className="pointer-events-none absolute -left-40 top-60 hidden h-[500px] w-[500px] -translate-y-1/2 rounded-full border-[2px] border-primary/10 lg:block" />
+      <div className="pointer-events-none absolute -right-40 bottom-0 hidden h-[400px] w-[400px] rounded-full border-[3px] border-primary/20 lg:block" />
+      <div className="pointer-events-none absolute -left-32 top-20 hidden h-[300px] w-[300px] rounded-full border-[3px] border-primary/30 lg:block" />
+      <div className="pointer-events-none absolute -left-10 top-10 hidden h-[500px] w-[500px] rounded-full border-[3px] border-primary/20 lg:block" />
 
       <div className="relative z-10 container mx-auto grid grid-cols-1 items-center gap-y-16 px-4 sm:px-6 lg:grid-cols-2 lg:gap-x-16 lg:px-8">
         {/* Coluna da Esquerda: Cabeçalho da seção */}

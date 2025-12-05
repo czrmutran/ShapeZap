@@ -39,9 +39,9 @@ export default function FuncionalidadesSection() {
       id="funcionalidades"
       className="relative overflow-hidden bg-background py-12 sm:py-16 lg:py-20"
     >
-      {/* Círculos decorativos de fundo – mantém igual */}
-      <div className="pointer-events-none absolute -right-40 -top-10 h-[500px] w-[500px] rounded-full border-[2px] border-primary/10" />
-      <div className="pointer-events-none absolute -left-40 bottom-0 h-[400px] w-[400px] rounded-full border-[3px] border-primary/20" />
+      {/* Círculos decorativos de fundo */}
+      <div className="pointer-events-none absolute -right-40 -top-10 hidden h-[500px] w-[500px] rounded-full border-[2px] border-primary/10 lg:block" />
+      <div className="pointer-events-none absolute -left-40 bottom-0 hidden h-[400px] w-[400px] rounded-full border-[3px] border-primary/20 lg:block" />
 
       <div className="relative z-10 container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] gap-10 lg:gap-14">
         {/* COLUNA ESQUERDA — CARDS COMPACTOS */}

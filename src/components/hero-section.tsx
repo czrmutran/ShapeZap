@@ -4,13 +4,13 @@ import { FadeIn } from './FadeIn';
 export default function HeroSection() {
   return (
     <section className="relative overflow-hidden pt-20 lg:pt-24">
-      {/* Círculos ocos */}
-      <div className="pointer-events-none absolute -left-32 top-20 h-[300px] w-[300px] rounded-full border-[3px] border-primary/30" />
-      <div className="pointer-events-none absolute -left-10 top-35 h-[500px] w-[500px] rounded-full border-[3px] border-primary/20" />
-      <div className="pointer-events-none absolute right-0 top-52 h-[260px] w-[260px] rounded-full border-[3px] border-primary/10" />
-      <div className="pointer-events-none absolute right-24 top-80 h-[120px] w-[120px] rounded-full border-[2px] border-primary/30" />
-      <div className="pointer-events-none absolute right-100 top-90 h-[500px] w-[500px] rounded-full border-[2px] border-primary/30" />
-      <div className="pointer-events-none absolute right-100 top-20 h-[400px] w-[400px] rounded-full border-[2px] border-primary/30" />
+      {/* Círculos decorativos de fundo */}
+      <div className="pointer-events-none absolute -left-32 top-20 hidden h-[300px] w-[300px] rounded-full border-[3px] border-primary/30 lg:block" />
+      <div className="pointer-events-none absolute -left-10 top-35 hidden h-[500px] w-[500px] rounded-full border-[3px] border-primary/20 lg:block" />
+      <div className="pointer-events-none absolute right-0 top-52 hidden h-[260px] w-[260px] rounded-full border-[3px] border-primary/10 lg:block" />
+      <div className="pointer-events-none absolute right-24 top-80 hidden h-[120px] w-[120px] rounded-full border-[2px] border-primary/30 lg:block" />
+      <div className="pointer-events-none absolute right-100 top-90 hidden h-[500px] w-[500px] rounded-full border-[2px] border-primary/30 lg:block" />
+      <div className="pointer-events-none absolute right-100 top-20 hidden h-[400px] w-[400px] rounded-full border-[2px] border-primary/30 lg:block" />
 
       <div className="relative z-10 container mx-auto grid grid-cols-1 items-center gap-12 px-4 py-16 text-center lg:grid-cols-2 lg:text-left">
         <FadeIn direction="right">
