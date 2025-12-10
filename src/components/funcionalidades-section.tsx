@@ -108,8 +108,11 @@ export default function FuncionalidadesSection() {
         </FadeIn>
 
         {/* COLUNA DIREITA — TEXTO */}
-        <FadeIn direction="left" delay={200}>
-          <div className="order-1 flex flex-col justify-center text-center lg:order-2 lg:text-right">
+        <FadeIn
+          direction="left"
+          delay={200}
+          className="order-1 flex flex-col justify-center text-center lg:order-2 lg:text-right"
+        >
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary/80">
               Funcionalidades
             </p>
@@ -133,7 +136,6 @@ export default function FuncionalidadesSection() {
             <p className="mt-3 text-sm text-foreground/60 md:hidden">
               Toque em cada funcionalidade para ver os detalhes.
             </p>
-          </div>
         </FadeIn>
       </div>
     </section>

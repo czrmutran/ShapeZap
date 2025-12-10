@@ -5,6 +5,7 @@ import HeroSection from '../components/hero-section';
 import FuncionalidadesSection from '../components/funcionalidades-section';
 import ParaquemSection from '../components/paraquem-section';
 import PlanosSection from '../components/planos-section';
+import VersaoComercialSection from '../components/versaocomercial-section';
 import ChamadaFinalSection from '../components/chamadafinal-section';
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <FuncionalidadesSection />
       <ParaquemSection />
       <PlanosSection />
+      <VersaoComercialSection />
       <ChamadaFinalSection />
     </>
   );

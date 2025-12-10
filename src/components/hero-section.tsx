@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { FadeIn } from './FadeIn';
+import { WHATSAPP_LINK } from './constants';
 
 export default function HeroSection() {
   return (
@@ -24,7 +25,10 @@ export default function HeroSection() {
                 prático e sem aplicativos complexos.
               </p>
             </div>
-            <button
+            <a
+              href={WHATSAPP_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
               className="
                 mt-4 inline-flex items-center gap-2 rounded-full
                 bg-primary px-10 py-3 text-base font-semibold text-primary-foreground
@@ -37,7 +41,7 @@ export default function HeroSection() {
             >
               Começar Agora
               <span className="text-xl leading-none">→</span>
-            </button>
+            </a>
           </div>
         </FadeIn>
 

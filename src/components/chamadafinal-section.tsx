@@ -1,4 +1,5 @@
 import { FadeIn } from './FadeIn';
+import { WHATSAPP_LINK } from './constants';
 
 export default function ChamadaFinalSection() {
   return (
@@ -22,7 +23,12 @@ export default function ChamadaFinalSection() {
               e veja como é fácil ter o controle da sua alimentação na palma da
               mão.
             </p>
-            <button
+            <a
+              href={`${WHATSAPP_LINK}?text=${encodeURIComponent(
+                'Olá! Gostaria de saber mais sobre o ShapeZap e como posso começar a usar.',
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
               className="
                 mt-10 inline-flex items-center gap-2 rounded-full
                 bg-primary px-10 py-3 text-base font-semibold text-primary-foreground
@@ -35,7 +41,7 @@ export default function ChamadaFinalSection() {
             >
               Quero Começar Agora
               <span className="text-xl leading-none">→</span>
-            </button>
+            </a>
           </div>
         </FadeIn>
       </div>

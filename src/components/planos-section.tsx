@@ -1,47 +1,64 @@
-import { Check } from 'lucide-react';
-import { clsx } from 'clsx';
-import { FadeIn } from './FadeIn';
+import { Check } from "lucide-react";
+import { clsx } from "clsx";
+import { FadeIn } from "./FadeIn";
+import { INDIVIDUAL_LINK } from "./constants";
+import { CASAL_LINK } from "./constants";
+import { FAMILIAR_LINK } from "./constants";
 
 const planos = [
   {
-    name: 'Individual',
-    price: 'R$19,90',
-    period: '/mês',
-    description: 'Acesso total para você atingir seus objetivos com precisão.',
+    name: "Individual",
+    description: "Para quem quer acompanhar a alimentação de forma prática, sozinho.",
+    price: "R$87,00",
+    installment: "ou 3x de R$29,00",
+    periodLabel: "Pagamento único anual",
+    period: "/ano",
     features: [
-      'Acesso a todos os recursos',
-      'Análises de refeição ilimitadas',
-      'Suporte prioritário via WhatsApp',
+      "Acesso a todos os recursos da plataforma",
+      "Análises de refeição ilimitadas",
+      "Suporte prioritário via WhatsApp",
     ],
-    buttonText: 'Assinar Agora',
+    buttonText: "Assinar agora",
     isFeatured: true,
+    whatsappMessage:
+      "Olá! Tenho interesse no plano Individual. Gostaria de saber como assinar.",
+    link: INDIVIDUAL_LINK,
   },
   {
-    name: 'Profissional',
-    price: 'R$99',
-    period: '/mês',
-    description:
-      'Para nutricionistas e personal trainers acompanharem seus clientes.',
+    name: "Familiar",
+    description: "Para famílias que desejam monitorar a alimentação de todos em um só lugar.",
+    price: "R$226,00",
+    installment: "ou 3x de R$75,00",
+    periodLabel: "Até 4 pessoas no mesmo plano",
+    period: "/ano",
     features: [
-      'Até 100 análises/mês',
-      'Painel de acompanhamento',
-      'Relatórios de progresso',
+      "Análises de refeição ilimitadas para todos os membros",
+      "Painel de acompanhamento dos membros",
+      "Relatórios de progresso mensais",
     ],
-    buttonText: 'Falar com Vendas',
+    buttonText: "Assinar agora",
     isFeatured: false,
+    whatsappMessage:
+      "Olá! Tenho interesse no plano Familiar. Gostaria de falar com a equipe de vendas.",
+    link: FAMILIAR_LINK,
   },
   {
-    name: 'Academia',
-    price: 'R$190',
-    period: '/mês',
-    description: 'Para academias que desejam oferecer um diferencial aos seus membros.',
+    name: "Casal",
+    description: "Para casais que querem evoluir juntos na alimentação.",
+    price: "R$147,00",
+    installment: "ou 3x de R$49,00",
+    periodLabel: "2 pessoas no mesmo plano",
+    period: "/ano",
     features: [
-      'Até 300 análises/mês',
-      'Painel de gestão de membros',
-      'Personalização com a marca',
+      "Análises de refeição ilimitadas para todos os membros",
+      "Painel compartilhado para os dois perfis",
+      "Acompanhamento de metas em conjunto",
     ],
-    buttonText: 'Falar com Vendas',
+    buttonText: "Assinar agora",
     isFeatured: false,
+    whatsappMessage:
+      "Olá! Tenho interesse no plano Casal. Gostaria de falar com a equipe de vendas.",
+    link: CASAL_LINK,
   },
 ];
 
@@ -64,8 +81,7 @@ export default function PlanosSection() {
               Planos flexíveis para cada necessidade
             </h2>
             <p className="mt-4 text-lg text-foreground/70 md:text-xl">
-              Seja para uso pessoal ou profissional, temos a solução ideal para
-              você.
+              Escolha o plano que combina com a sua rotina e deixe a ShapeZap cuidar do resto.
             </p>
           </div>
         </FadeIn>
@@ -76,47 +92,86 @@ export default function PlanosSection() {
             <FadeIn
               key={plano.name}
               delay={index * 150}
-              className="h-full"
+              className={clsx(
+                "h-full",
+                plano.name === "Individual"
+                  ? "lg:order-2"
+                  : index === 1
+                  ? "lg:order-1"
+                  : "lg:order-3"
+              )}
             >
               <div
                 className={clsx(
-                  'relative flex h-full flex-col rounded-3xl p-8 shadow-xl',
-                  'bg-background/50 backdrop-blur-sm',
+                  "relative flex h-full flex-col rounded-3xl p-8 transition-all duration-300",
+                  "bg-background/60 backdrop-blur-sm shadow-[0_18px_45px_rgba(15,23,42,0.08)]",
                   plano.isFeatured
-                    ? 'ring-2 ring-primary'
-                    : 'ring-1 ring-white/10',
+                    ? "ring-2 ring-primary lg:-translate-y-2 lg:scale-[1.04] lg:shadow-[0_24px_70px_rgba(12,148,136,0.35)]"
+                    : "ring-1 ring-white/10 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(15,23,42,0.12)]"
                 )}
               >
                 {plano.isFeatured && (
-                  <div className="absolute top-0 -translate-y-1/2 self-center rounded-full bg-primary px-4 py-1 text-sm font-semibold text-primary-foreground shadow-md">
-                    Mais Popular
+                  <div className="absolute top-0 -translate-y-1/2 self-center rounded-full bg-primary px-4 py-1 text-xs font-semibold uppercase tracking-wide text-primary-foreground shadow-md">
+                    Mais popular
                   </div>
                 )}
+
+                {/* Título + descrição curta */}
                 <h3 className="font-montserrat text-2xl font-bold text-foreground">
                   {plano.name}
                 </h3>
                 <p className="mt-2 text-sm text-foreground/70">
                   {plano.description}
                 </p>
-                <div className="mt-6 flex items-baseline gap-x-1">
-                  <span className="text-4xl font-bold tracking-tight text-foreground">
-                    {plano.price}
-                  </span>
-                  <span className="text-sm font-semibold text-foreground/70">
-                    {plano.period}
-                  </span>
+
+                {/* Bloco de preço organizado */}
+                <div className="mt-6 space-y-1">
+                  <div className="flex items-baseline gap-x-1">
+                    <span className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground">
+                      {plano.price}
+                    </span>
+                    <span className="text-sm font-semibold text-foreground/70">
+                      {plano.period}
+                    </span>
+                  </div>
+                  <p className="text-sm font-semibold text-foreground/80">
+                    {plano.installment}
+                  </p>
+                  <p className="text-xs text-foreground/60">
+                    {plano.periodLabel}
+                  </p>
                 </div>
-                <ul role="list" className="mt-8 space-y-3 text-sm text-foreground/80">
+
+                {/* Lista de benefícios */}
+                <ul
+                  role="list"
+                  className="mt-6 space-y-3 text-sm text-foreground/80"
+                >
                   {plano.features.map((feature) => (
                     <li key={feature} className="flex gap-x-3">
-                      <Check className="h-6 w-5 flex-none text-primary" aria-hidden="true" />
-                      {feature}
+                      <Check
+                        className="mt-[2px] h-5 w-5 flex-none text-primary"
+                        aria-hidden="true"
+                      />
+                      <span>{feature}</span>
                     </li>
                   ))}
                 </ul>
-                <button className={clsx('mt-auto rounded-md px-4 py-2.5 text-sm font-semibold transition-colors', plano.isFeatured ? 'bg-primary text-primary-foreground hover:bg-primary/90' : 'bg-primary/10 text-primary hover:bg-primary/20')}>
+
+                {/* Botão */}
+                <a
+                  href={plano.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={clsx(
+                    "mt-8 rounded-full px-4 py-2.5 text-center text-sm font-semibold transition-all",
+                    plano.isFeatured
+                      ? "bg-primary text-primary-foreground shadow-sm hover:bg-primary/90 hover:shadow-md"
+                      : "bg-primary/10 text-primary hover:bg-primary/20"
+                  )}
+                >
                   {plano.buttonText}
-                </button>
+                </a>
               </div>
             </FadeIn>
           ))}
