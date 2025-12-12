@@ -36,7 +36,7 @@ export default function VersaoComercialSection() {
                 >
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary/80">
-                White Label · Versão Comercial
+                Versão Popular / Comercial
               </p>
               <h2 className="mt-3 font-montserrat text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
                 Transforme o ShapeZap na sua própria marca.

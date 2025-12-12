@@ -24,11 +24,7 @@ export default function ChamadaFinalSection() {
               mão.
             </p>
             <a
-              href={`${WHATSAPP_LINK}?text=${encodeURIComponent(
-                'Olá! Gostaria de saber mais sobre o ShapeZap e como posso começar a usar.',
-              )}`}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#pricing"
               className="
                 mt-10 inline-flex items-center gap-2 rounded-full
                 bg-primary px-10 py-3 text-base font-semibold text-primary-foreground

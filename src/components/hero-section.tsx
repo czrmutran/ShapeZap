@@ -39,7 +39,7 @@ export default function HeroSection() {
                 focus-visible:ring-offset-2 focus-visible:ring-offset-background
               "
             >
-              Começar Agora
+              Teste Agora
               <span className="text-xl leading-none">→</span>
             </a>
           </div>

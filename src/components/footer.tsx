@@ -3,12 +3,12 @@ import Link from 'next/link';
 
 const socialLinks = [
   {
-    href: 'https://instagram.com',
+    href: 'https://www.instagram.com/shapezapia?igsh=eHA1bTR6MGpqdW5i&utm_source=qr',
     icon: <Instagram className="h-6 w-6" />,
     name: 'Instagram',
   },
   {
-    href: 'https://whatsapp.com',
+    href: 'https://wa.me/5561991579339',
     icon: <MessageCircle className="h-6 w-6" />,
     name: 'WhatsApp',
   },
