@@ -1,5 +1,11 @@
 import Header from '../../components/header-section';
 import { FadeIn } from '../../components/FadeIn';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Política de Privacidade",
+  description: "Entenda como o ShapeZap coleta, utiliza e protege seus dados pessoais. Sua privacidade e segurança são nossa prioridade.",
+};
 
 export default function Privacy() {
   return (

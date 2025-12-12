@@ -1,5 +1,11 @@
 import Header from '../../components/header-section';
 import { FadeIn } from '../../components/FadeIn';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Sobre Nós",
+  description: "Conheça o ShapeZap, seu assistente nutricional no WhatsApp. Nossa missão é simplificar a nutrição e o bem-estar através da tecnologia.",
+};
 
 export default function About() {
   return (

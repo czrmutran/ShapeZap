@@ -2,7 +2,6 @@ import type React from "react"
 import type { Metadata, Viewport } from "next"
 import { Inter, Montserrat } from "next/font/google"
 import Footer from "../components/footer"
-import Header from "../components/header-section"
 import "./globals.css"
 
 const inter = Inter({
@@ -20,20 +19,66 @@ const montserrat = Montserrat({
 })
 
 export const metadata: Metadata = {
-  title: "ShapeZap IA",
-  description:
-    "ShapeZap IA - A primeira ferramenta de apoio à dieta no WhatsApp que calcula calorias automaticamente com uma simples foto — rápida, prática e acessível.",
+  metadataBase: new URL('https://shapezap.com.br'), // Substituir pelo domínio real quando houver
+  title: {
+    default: "ShapeZap IA - Nutricionista no WhatsApp",
+    template: "%s | ShapeZap IA"
+  },
+  description: "ShapeZap IA - A primeira ferramenta de apoio à dieta no WhatsApp que calcula calorias automaticamente com uma simples foto. Rápida, prática e acessível.",
+  keywords: ["nutrição", "dieta", "inteligência artificial", "whatsapp", "contador de calorias", "saúde", "emagrecimento", "nutricionista ia"],
+  authors: [{ name: "ShapeZap Team" }],
+  creator: "ShapeZap",
+  publisher: "ShapeZap",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  openGraph: {
+    title: "ShapeZap IA - Nutricionista no WhatsApp",
+    description: "Transforme sua alimentação com o poder da IA diretamente no seu WhatsApp.",
+    url: 'https://shapezap.com.br',
+    siteName: 'ShapeZap IA',
+    locale: 'pt_BR',
+    type: 'website',
+    images: [
+      {
+        url: '/logo_1.png', // Usando o logo como imagem de fallback
+        width: 800,
+        height: 600,
+        alt: 'ShapeZap IA Logo',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "ShapeZap IA - Nutricionista no WhatsApp",
+    description: "Transforme sua alimentação com o poder da IA diretamente no seu WhatsApp.",
+    images: ['/logo_1.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 }
 
 export const viewport: Viewport = {
-    width: "device-width",
-    initialScale: 1,
-    viewportFit: "cover",
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#16a34a", // Cor primária (verde)
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" className="scroll-smooth">
       <body
         className={`
           flex flex-col 

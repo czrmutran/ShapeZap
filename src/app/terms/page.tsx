@@ -1,5 +1,11 @@
 import Header from '../../components/header-section';
 import { FadeIn } from '../../components/FadeIn';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Termos de Serviço",
+  description: "Leia os Termos de Serviço do ShapeZap para entender as regras de uso, direitos e responsabilidades ao utilizar nossa plataforma.",
+};
 
 export default function Terms() {
   return (
