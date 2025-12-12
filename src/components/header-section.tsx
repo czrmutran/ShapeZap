@@ -62,7 +62,7 @@ export default function Header() {
         {/* Logo + Nome */}
         <Link href="/" onClick={handleLogoClick} className="flex items-center gap-3">
           <Image
-            src="/logo_1.png"
+            src="/logo_1.webp"
             alt="ShapeZap IA Logo"
             width={500}
             height={500}
