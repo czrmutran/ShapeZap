@@ -25,7 +25,19 @@ export const metadata: Metadata = {
     template: "%s | ShapeZap IA"
   },
   description: "ShapeZap IA - A primeira ferramenta de apoio à dieta no WhatsApp que calcula calorias automaticamente com uma simples foto. Rápida, prática e acessível.",
-  keywords: ["nutrição", "dieta", "inteligência artificial", "whatsapp", "contador de calorias", "saúde", "emagrecimento", "nutricionista ia"],
+  keywords: [
+    "nutricionista whatsapp", 
+    "contador de calorias ia", 
+    "dieta whatsapp", 
+    "emagrecer com ia", 
+    "shapezap", 
+    "inteligencia artificial nutrição", 
+    "foto calorias", 
+    "diario alimentar whatsapp",
+    "saúde",
+    "bem-estar",
+    "reeducação alimentar"
+  ],
   authors: [{ name: "ShapeZap Team" }],
   creator: "ShapeZap",
   publisher: "ShapeZap",

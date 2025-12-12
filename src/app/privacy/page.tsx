@@ -5,6 +5,14 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: "Política de Privacidade",
   description: "Entenda como o ShapeZap coleta, utiliza e protege seus dados pessoais. Sua privacidade e segurança são nossa prioridade.",
+  keywords: [
+    "política de privacidade shapezap", 
+    "proteção de dados whatsapp", 
+    "segurança da informação", 
+    "lgpd shapezap", 
+    "privacidade de dados nutrição",
+    "dados pessoais shapezap"
+  ]
 };
 
 export default function Privacy() {

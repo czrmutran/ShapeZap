@@ -5,6 +5,14 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: "Termos de Serviço",
   description: "Leia os Termos de Serviço do ShapeZap para entender as regras de uso, direitos e responsabilidades ao utilizar nossa plataforma.",
+  keywords: [
+    "termos de serviço shapezap", 
+    "regras de uso shapezap", 
+    "contrato shapezap", 
+    "condições gerais shapezap", 
+    "direitos do usuário shapezap",
+    "termos legais shapezap"
+  ]
 };
 
 export default function Terms() {

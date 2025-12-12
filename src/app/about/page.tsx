@@ -5,6 +5,15 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: "Sobre Nós",
   description: "Conheça o ShapeZap, seu assistente nutricional no WhatsApp. Nossa missão é simplificar a nutrição e o bem-estar através da tecnologia.",
+  keywords: [
+    "sobre shapezap", 
+    "quem somos shapezap", 
+    "missão shapezap", 
+    "contato shapezap", 
+    "atenndo.ia", 
+    "tecnologia nutricional",
+    "empresa de ia brasilia"
+  ]
 };
 
 export default function About() {
