@@ -8,7 +8,7 @@ const socialLinks = [
     name: 'Instagram',
   },
   {
-    href: 'https://wa.me/5561991579339',
+    href: 'https://wa.me/‪5561992022901‬',
     icon: <MessageCircle className="h-6 w-6" />,
     name: 'WhatsApp',
   },
