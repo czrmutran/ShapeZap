@@ -1,4 +1,4 @@
-export const WHATSAPP_LINK = "https://wa.me/‪5561992022901‬";
+export const WHATSAPP_LINK = "https://wa.me/5561992022901";
 
 export const INDIVIDUAL_LINK = "https://payment-link-v3.pagar.me/pl_OyRNKakd78bE32RCdPcqGMW6zv0eDPAX";
 
